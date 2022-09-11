@@ -17,7 +17,6 @@ def ap1(string_text):
     response_text = resp.choices[0].text.split('.')
     return response_text[0]
 
-
 if __name__ == "__main__":
 
     query = 'Write me a haiku about '
