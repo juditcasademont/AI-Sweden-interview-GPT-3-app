@@ -8,8 +8,8 @@ def ap(string_text):
     resp = openai.Edit.create(
         model = "text-davinci-edit-001",
         input = string_text,
-        instruction = "Fix grammatical mistakes.",
-        temperature = 0.7,
+        instruction = "Fix the grammatical mistakes of the following sentence: ",
+        temperature = 0.5,
         top_p = 1
         )
     response_text = resp.choices[0].text.split('.')

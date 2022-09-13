@@ -10,9 +10,9 @@ def ap1(string_text):
         prompt = string_text,
         temperature = 1,
         max_tokens = 100,
-        top_p = 0.15,
+        top_p = 0.4,
         frequency_penalty = 0,
-        presence_penalty = 0
+        presence_penalty = 0.1
     )
     response_text = resp.choices[0].text.split('.')
     return response_text[0]
@@ -25,6 +25,6 @@ if __name__ == "__main__":
     parser.add_argument('Topic', help='Specify the desired topic of your haiku.')
     args = parser.parse_args()
 
-    response = ap1(query + str(args.Topic))
+    response = ap1(query + str(args.Topic) + '.')
 
     print(response)

@@ -7,7 +7,7 @@ def ap1(string_text):
     resp = openai.Completion.create(
         model = 'text-davinci-002',
         prompt = string_text,
-        temperature = 0.5,
+        temperature = 0.25,
         max_tokens = 100,
         top_p = 0.1,
         frequency_penalty = 0,
