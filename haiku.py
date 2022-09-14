@@ -2,7 +2,7 @@ import os
 import openai
 import argparse
 
-openai.api_key = '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'
+openai.api_key = ''
 
 def ap1(string_text):
     resp = openai.Completion.create(

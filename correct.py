@@ -2,7 +2,7 @@ import os
 import openai
 import argparse
 
-openai.api_key = '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'
+openai.api_key = ''
 
 def ap(string_text):
     resp = openai.Edit.create(
@@ -10,7 +10,7 @@ def ap(string_text):
         input = string_text,
         instruction = "Fix the grammatical mistakes of the following sentence: ",
         temperature = 0.5,
-        top_p = 1
+        top_p = 0.15
         )
     response_text = resp.choices[0].text.split('.')
     return response_text[0]

@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = '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'
+openai.api_key = ''
 
 conversation = '' # start the conversation string
 
